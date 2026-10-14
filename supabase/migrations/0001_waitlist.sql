@@ -94,4 +94,5 @@ alter table public.audit_events enable row level security;
 revoke all on public.waitlist, public.email_verifications, public.email_deliveries, public.waitlist_attempts, public.admin_users, public.audit_events from anon, authenticated;
 grant select on public.admin_users to authenticated;
 
+drop policy if exists "admins may read own role" on public.admin_users;
 create policy "admins may read own role" on public.admin_users for select to authenticated using (user_id = auth.uid());
