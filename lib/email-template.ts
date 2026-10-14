@@ -19,4 +19,18 @@ ${link?`<tr><td style="border-top:1px solid #454747;padding:30px 0"><p style="fo
 <tr><td style="border-top:1px solid #454747;padding-top:25px;font-size:12px;color:#999">good things happen offline. &nbsp;·&nbsp; <a href="${origin}" style="color:#aaa">vento-u.s.com</a></td></tr>
 </table></td></tr></table></body></html>`;
 }
+export function waitlistVerificationEmail(verificationUrl:string){
+  const safeUrl=escapeHtml(verificationUrl);
+  return brandedEmail({heading:"one last thing.",body:"confirm your email to join the vento. waitlist."})
+    .replace("talk soon.</p>",`<a href="${safeUrl}" style="display:inline-block;color:#17191a;background:#f5f2ec;padding:14px 20px;text-decoration:none;margin:0 0 36px">confirm your email.</a><p style="font-size:13px;color:#999;overflow-wrap:anywhere">${safeUrl}</p><p style="font-size:16px;line-height:1.6;margin:32px 0 44px">talk soon.</p>`);
+}
+
 export function waitlistConfirmationEmail(referralUrl:string){return brandedEmail({heading:"you're on the list.",body:"we're building a new way to bring people together to meet, connect, and experience more.",referralUrl});}
+
+export function verificationEmailText(verificationUrl:string){
+  return `one last thing.\n\nconfirm your email to join the vento. waitlist:\n${verificationUrl}\n\ntalk soon.\n\nvento. — good things happen offline.`;
+}
+
+export function confirmationEmailText(referralUrl:string){
+  return `you're on the list.\n\nwe're building a new way to bring people together to meet, connect, and experience more.\n\ntalk soon.\n\nyour personal invite link: ${referralUrl}\n\nvento. — good things happen offline.`;
+}
