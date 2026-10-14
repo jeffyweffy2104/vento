@@ -1,0 +1,12 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const phrases=["tonight has potential.","see you out there.","come as you are.","the people make the place.","meet me somewhere.","meet me anywhere.","here's to the unexpected.","meet your people.","goodbye, fomo.","people worth knowing.","it's your life.","be who you want to be.","go where you want to go.","connection is all around.","a new way of building community.","strangers, for now.","for the plot.","you had to be there.","don't be a stranger.","see where the night goes.","good nights, better stories.","the city is yours.","it's all happening.","be part of something.","life happens together.","see you around.","all in good company.","the world is open.","wherever you find yourself.","good things happen offline."];
+
+export default function About(){
+  const [scroll,setScroll]=useState(0);
+  useEffect(()=>{let frame=0;const update=()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>setScroll(window.scrollY))};window.addEventListener("scroll",update,{passive:true});return()=>{window.removeEventListener("scroll",update);cancelAnimationFrame(frame)}},[]);
+  return <main className="shell about-shell"><header className="top"><Link className="logo logo-image" href="/" aria-label="vento home"><Image src="/vento-mark.svg" alt="" width={54} height={54}/></Link><Link href="/">back</Link></header><div className="about-atmosphere" aria-hidden="true">{phrases.map((phrase,i)=><span key={phrase} className="about-phrase" style={{left:`${(i*37+7)%92}%`,top:`${(i*29+11)%95}%`,fontSize:`${12+i%4*5}px`,animationDelay:`${-i*.71}s`,animationDuration:`${7+i%5*1.2}s`,transform:`translate3d(0,${Math.min(scroll,1100)*(i%3-1)*.018}px,0)`}}>{phrase}</span>)}</div><section className="about-content"><div className="about-copy"><p className="eyebrow">our philosophy</p><h1>good things happen offline.</h1><p>we believe technology is most valuable when it brings us closer to real life.</p><p>vento. brings like-minded people together through curated experiences, creating more opportunities to connect, discover, and experience the world beyond our screens.</p><Link className="cta" href="/?join=1">join the waitlist.</Link></div></section><footer className="foot"><span>© 2026 vento.</span><span>good things happen offline.</span></footer></main>;
+}
