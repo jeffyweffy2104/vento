@@ -40,3 +40,35 @@ The supplied original image is a **brand board**, not a standalone vector logo. 
 
 ## Scope and status
 This PR implements the About-page atmosphere and its styles. The preceding foundation PR contains the homepage and initial waitlist scaffold. Neither PR should be described as a fully functioning, deployed product. The logo replacement remains pending an exact asset export.
+
+## Production domain and Vercel hosting — vento-u.s.com
+The founder owns **vento-u.s.com**. Treat this as the canonical production domain (the hyphen and dot are significant). Do not use `vento.co` or another unowned domain in links or sender identities.
+
+1. Connect GitHub repository `jeffyweffy2104/vento` to a new Vercel project; choose the Next.js framework preset and production branch `main` after review/merge.
+2. In Vercel project settings, add `vento-u.s.com` as the production domain. Add `www.vento-u.s.com` only if desired, with one canonical redirect.
+3. At the domain registrar/DNS host, add **the exact A/CNAME/verification records Vercel displays for this project**. Do not guess DNS targets or overwrite existing MX/TXT records.
+4. In Vercel, set `NEXT_PUBLIC_SITE_URL=https://vento-u.s.com`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `RESEND_REPLY_TO_EMAIL`, and `ADMIN_TOKEN` as appropriate. Keep secrets server-side, out of git, and scope to the required environments.
+5. Deploy a preview first, confirm successful build and runtime logs, then deploy production and test HTTPS, root page, /about, mobile animation, waitlist POST, and referral URLs. Configure DNS/SSL only after access to registrar and Vercel is available.
+6. Verify the chosen apex or www redirect, HTTPS, favicon, metadata, robots policy, analytics and 404 behavior. Add an uptime monitor and error alerting before public launch.
+
+**Status:** No Vercel project, domain DNS record, or production deployment has been created or verified through these commits.
+
+## Official mailbox and branded outgoing email
+The founder has an existing official Vento email account; **its exact address and provider are not yet supplied**. Never replace its MX records or presume it is hosted by Resend. Use the actual address for `RESEND_FROM_EMAIL` and optional `RESEND_REPLY_TO_EMAIL` only after confirming the mailbox and sending-domain setup.
+
+- `lib/email-template.ts` contains a reusable charcoal/off-white HTML email shell and the approved waitlist confirmation copy, including the personal referral URL. It is a template, **not a live mail send**.
+- Before using Resend, verify the appropriate sending domain/subdomain with the DNS records Resend specifies (SPF/DKIM, and DMARC where applicable). Coordinate with existing mail-provider SPF/DKIM/MX records; don't break inbound email.
+- For founder outreach, use the official mailbox with a matching Vento display name, approved **V.** signature/logo asset, and branded footer. HTML email client support varies: include plain-text fallback and a text-based logo fallback; avoid relying on animations in email.
+- For automated confirmation, integrate Resend server-side after successful verified registration; log provider IDs, deduplicate sends, handle bounces/complaints and webhooks, and implement retry policy.
+- For marketing messages, obtain appropriate consent and include required sender identity, mailing address, and unsubscribe mechanisms. Transactional confirmation and promotional campaigns should be classified and handled separately.
+- Confirm that referral links in email use `https://vento-u.s.com/?ref=CODE`, not localhost or an old placeholder.
+
+### Release checklist
+- [ ] Founder supplies exact business email address and mailbox provider
+- [ ] Founder connects GitHub and Vercel accounts and adds owned domain
+- [ ] Registrar DNS and Vercel domain verified without disrupting email
+- [ ] Official sender domain verified and branded email tested across major clients
+- [ ] Approved original V. logo exported from supplied brand board and installed as final asset
+- [ ] End-to-end waitlist, referral, consent, email and delivery tested
+- [ ] Privacy policy, unsubscribe, abuse controls, and secure admin access implemented
+- [ ] Preview and production builds pass and are manually reviewed
