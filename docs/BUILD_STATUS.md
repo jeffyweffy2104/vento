@@ -18,7 +18,7 @@
 - Create founder Supabase Auth user and `admin_users` owner row.
 - Confirm the exact official mailbox/sender and verify Resend DNS.
 - Set production environment values in Vercel.
-- Connect `vento-u.s.com` using Vercel-provided DNS values without replacing mail records.
+- Connect `vento-us.com` using Vercel-provided DNS values without replacing mail records.
 - Replace the approximate `public/vento-mark.svg` with the approved source export when supplied.
 - Review legal copy with counsel before sending marketing SMS; SMS delivery is intentionally not enabled.
 

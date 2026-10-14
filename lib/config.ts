@@ -4,7 +4,7 @@ const serverSchema = z.object({
   SUPABASE_URL: z.string().url(),
   SUPABASE_SERVICE_ROLE_KEY: z.string().min(20),
   ABUSE_HASH_SECRET: z.string().min(32),
-  NEXT_PUBLIC_SITE_URL: z.string().url().default("https://vento-u.s.com"),
+  NEXT_PUBLIC_SITE_URL: z.string().url().default("https://vento-us.com"),
 });
 
 export function serverConfig() {

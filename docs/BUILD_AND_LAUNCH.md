@@ -41,13 +41,13 @@ The supplied original image is a **brand board**, not a standalone vector logo. 
 ## Scope and status
 This PR implements the About-page atmosphere and its styles. The preceding foundation PR contains the homepage and initial waitlist scaffold. Neither PR should be described as a fully functioning, deployed product. The logo replacement remains pending an exact asset export.
 
-## Production domain and Vercel hosting — vento-u.s.com
-The founder owns **vento-u.s.com**. Treat this as the canonical production domain (the hyphen and dot are significant). Do not use `vento.co` or another unowned domain in links or sender identities.
+## Production domain and Vercel hosting — vento-us.com
+The founder owns **vento-us.com**. Treat this as the canonical production domain. Ownership was verified directly in the GoDaddy account on 2026-10-14; the earlier `vento-u.s.com` entry was incorrect.
 
 1. Connect GitHub repository `jeffyweffy2104/vento` to a new Vercel project; choose the Next.js framework preset and production branch `main` after review/merge.
-2. In Vercel project settings, add `vento-u.s.com` as the production domain. Add `www.vento-u.s.com` only if desired, with one canonical redirect.
+2. In Vercel project settings, add `vento-us.com` as the production domain. Add `www.vento-us.com` only if desired, with one canonical redirect.
 3. At the domain registrar/DNS host, add **the exact A/CNAME/verification records Vercel displays for this project**. Do not guess DNS targets or overwrite existing MX/TXT records.
-4. In Vercel, set `NEXT_PUBLIC_SITE_URL=https://vento-u.s.com`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `RESEND_REPLY_TO_EMAIL`, and `ADMIN_TOKEN` as appropriate. Keep secrets server-side, out of git, and scope to the required environments.
+4. In Vercel, set `NEXT_PUBLIC_SITE_URL=https://vento-us.com`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `RESEND_REPLY_TO_EMAIL`, and the other documented environment values as appropriate. Keep secrets server-side, out of git, and scope to the required environments.
 5. Deploy a preview first, confirm successful build and runtime logs, then deploy production and test HTTPS, root page, /about, mobile animation, waitlist POST, and referral URLs. Configure DNS/SSL only after access to registrar and Vercel is available.
 6. Verify the chosen apex or www redirect, HTTPS, favicon, metadata, robots policy, analytics and 404 behavior. Add an uptime monitor and error alerting before public launch.
 
@@ -61,7 +61,7 @@ The founder has an existing official Vento email account; **its exact address an
 - For founder outreach, use the official mailbox with a matching Vento display name, approved **V.** signature/logo asset, and branded footer. HTML email client support varies: include plain-text fallback and a text-based logo fallback; avoid relying on animations in email.
 - For automated confirmation, integrate Resend server-side after successful verified registration; log provider IDs, deduplicate sends, handle bounces/complaints and webhooks, and implement retry policy.
 - For marketing messages, obtain appropriate consent and include required sender identity, mailing address, and unsubscribe mechanisms. Transactional confirmation and promotional campaigns should be classified and handled separately.
-- Confirm that referral links in email use `https://vento-u.s.com/?ref=CODE`, not localhost or an old placeholder.
+- Confirm that referral links in email use `https://vento-us.com/?ref=CODE`, not localhost or an old placeholder.
 
 ### Release checklist
 - [ ] Founder supplies exact business email address and mailbox provider
