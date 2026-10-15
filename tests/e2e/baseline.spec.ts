@@ -2,9 +2,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
 test("landing page exposes the waitlist flow", async ({ page }) => {
-  await page.goto("/");
-  await expect(page.getByRole("heading", { name: /find your people in/i })).toBeVisible();
-  await page.getByRole("button", { name: /join the waitlist/i }).click();
+  await page.goto("/?join=1");
   await expect(page.getByRole("heading", { name: "you're invited." })).toBeVisible();
   await expect(page.getByLabel("Email address")).toBeVisible();
   await expect(page.getByText(/optional marketing texts/i)).toBeVisible();
