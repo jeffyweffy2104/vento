@@ -13,6 +13,7 @@
 - Automated lint, type, unit test, production build, and GitHub Actions verification.
 - 222 reconstruction PR-1 foundation: architecture boundary ADR, safe capture runbook, ignored raw-evidence area, redaction utility, route/parity templates, and desktop/mobile Playwright smoke coverage.
 - 222 reconstruction PR-2 public capture: landing, About, Contact, phone entry, Messages handoff, fallback transition, responsive behavior, and passive REA evidence documented without submitting personal data.
+- 222 reconstruction PR-3 design contract: original Vento tokens, exact landing copy, responsive information architecture, conversation states, accessible handoff/fallback behavior, performance constraints, and rollout invariants.
 
 ## Live infrastructure
 
