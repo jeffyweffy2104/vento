@@ -5,3 +5,9 @@ node_modules
 .vercel
 *.tsbuildinfo
 coverage
+playwright-report
+test-results
+research/222/raw
+research/222/private
+research/222/**/*.har
+research/222/**/*.zip
