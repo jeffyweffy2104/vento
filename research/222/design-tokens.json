@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "scope": "Vento original design system informed by observed interaction patterns",
+  "color": {
+    "canvas": "#101714",
+    "canvasElevated": "#18211d",
+    "ink": "#f3efe4",
+    "inkMuted": "#b8b7ad",
+    "line": "rgba(243, 239, 228, 0.22)",
+    "accent": "#b8ff79",
+    "danger": "#ff8f80",
+    "messageSent": "#d8ffb7",
+    "messageReceived": "#282f2b"
+  },
+  "type": {
+    "display": "Didot, Bodoni 72, Times New Roman, serif",
+    "body": "Arial, Helvetica Neue, sans-serif",
+    "scalePx": { "xs": 12, "sm": 14, "md": 16, "lg": 22, "xl": 42, "hero": 76 }
+  },
+  "spacePx": { "1": 4, "2": 8, "3": 12, "4": 16, "6": 24, "8": 32, "12": 48, "16": 64 },
+  "radiusPx": { "control": 12, "panel": 22, "bubble": 24, "round": 999 },
+  "motionMs": { "fast": 160, "normal": 280, "phrase": 2400 },
+  "breakpointPx": { "compact": 640, "tablet": 768, "wide": 1200 },
+  "contentWidthPx": { "copy": 640, "conversation": 720, "page": 1280 }
+}
