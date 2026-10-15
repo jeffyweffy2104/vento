@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "status": "licensed_editorial_montage",
+  "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedAt": "2026-10-15",
+    "notes": "Free website use and modification. Do not imply that depicted people endorse Vento."
+  },
+  "processing": {
+    "durationSeconds": 4.5,
+    "width": 960,
+    "fps": 24,
+    "video": "H.264 MP4, CRF 27, no audio, fast start",
+    "treatment": "Editorial collage with grayscale, low exposure, masks, grain, and a distinct 3D sculpture layer"
+  },
+  "clips": [
+    { "filename": "source/dancefloor.mp4", "creator": "MART PRODUCTION", "source": "https://www.pexels.com/video/group-of-people-dancing-in-a-nightclub-7271837/", "sha256": "9646ef7d18e6ba9cb34a437a8d14cc27364ce34e65ad58a88db826689f9e33bd" },
+    { "filename": "source/bar-conversation.mp4", "creator": "Ivan S", "source": "https://www.pexels.com/video/young-people-chatting-in-a-bar-6962018/", "sha256": "2fb3e78ad1b86926cdea3a5efd77bb7c1c42a6614614d01f66266f62e049d9c6" },
+    { "filename": "source/friends-dancing.mp4", "creator": "RDNE Stock project", "source": "https://www.pexels.com/video/women-dancing-together-6174236/", "sha256": "2e0d6ed647b639c844b18f7cf51793e3411685dc0ceddc6d39b066d9e8bce1b0" },
+    { "filename": "source/city-crowd.mp4", "creator": "REGENR8R NYC", "source": "https://www.pexels.com/video/people-walking-in-city-at-night-14369423/", "sha256": "597d30c49b532536fe833e7e89c16fa279154308dbc975125a27f78dd2da57ff" }
+  ]
+}
