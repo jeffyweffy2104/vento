@@ -1,5 +1,37 @@
 {
   "schemaVersion": 1,
   "target": "https://222.place",
-  "captures": []
+  "captures": [
+    {
+      "id": "landing-2026-10-14",
+      "capturedAt": "2026-10-14T20:14:26-04:00",
+      "url": "https://222.place/",
+      "access": "public",
+      "viewports": ["1440x900", "390x844"],
+      "method": ["in-app browser DOM and visual inspection", "REA passive CDP inspection"],
+      "reaEvidenceId": "ev_6536c7c01a98a364d6bac7bdec807da529f3db9fa7c83c589f88441b3d17aa5b",
+      "containsPersonalData": false,
+      "notes": "Landing, About overlay, Contact overlay, signup navigation, and responsive structure observed. No source text or private state retained."
+    },
+    {
+      "id": "signup-2026-10-14",
+      "capturedAt": "2026-10-14T20:12:43-04:00",
+      "url": "https://rsvp.222.place/?utm_source=landing",
+      "access": "public",
+      "viewports": ["1440x900"],
+      "method": ["in-app browser DOM and visual inspection"],
+      "containsPersonalData": false,
+      "notes": "Phone entry and explicit SMS consent copy observed. No phone number entered and no form submitted."
+    },
+    {
+      "id": "messaging-handoff-2026-10-14",
+      "capturedAt": "2026-10-14T20:13:30-04:00",
+      "url": "https://222.place/recover-abc-onboarding?utm_source=landing",
+      "access": "public",
+      "viewports": ["1440x900"],
+      "method": ["in-app browser DOM inspection"],
+      "containsPersonalData": false,
+      "notes": "Messages-app handoff card and phone-entry fallback observed. Handoff button was not activated and no message was sent."
+    }
+  ]
 }

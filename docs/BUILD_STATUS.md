@@ -12,6 +12,7 @@
 - Privacy, terms, robots, sitemap, 404, security headers, health endpoint, and social metadata.
 - Automated lint, type, unit test, production build, and GitHub Actions verification.
 - 222 reconstruction PR-1 foundation: architecture boundary ADR, safe capture runbook, ignored raw-evidence area, redaction utility, route/parity templates, and desktop/mobile Playwright smoke coverage.
+- 222 reconstruction PR-2 public capture: landing, About, Contact, phone entry, Messages handoff, fallback transition, responsive behavior, and passive REA evidence documented without submitting personal data.
 
 ## Live infrastructure
 
@@ -25,7 +26,7 @@
 - Replace the approximate `public/vento-mark.svg` with the approved source export when supplied.
 - Review legal copy with counsel before sending marketing SMS; SMS delivery is intentionally not enabled.
 - Verify any messaging provider/API and Apple platform requirements before representing an iMessage handoff as functional.
-- Complete authorized reference capture and approve the parity/design contracts before implementing later reconstruction phases.
+- Observe post-verification behavior only with an owner-controlled test number and explicit authorization; it is not required to design the public Vento foundation.
 
 ## Verification
 

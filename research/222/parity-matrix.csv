@@ -1,4 +1,6 @@
 surface,reference_evidence,vento_route,status,acceptance_test
-landing,,/,baseline,Playwright landing smoke
-conversation,,,not-started,Original accessible conversation states
-messaging-handoff,,,not-started,Consent and supported-provider contract
+landing,landing-2026-10-14,/,observed,Playwright landing smoke
+about overlay,landing-2026-10-14,/about,observed-existing,Keyboard and responsive smoke
+phone entry,signup-2026-10-14,/join,design-next,Validation consent and recovery tests
+conversation,messaging-handoff-2026-10-14,/messages,design-next,Original accessible conversation states
+messaging handoff,messaging-handoff-2026-10-14,/join/continue,provider-blocked,Consent and supported-provider contract
