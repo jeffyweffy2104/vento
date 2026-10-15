@@ -16,6 +16,7 @@
 - 222 reconstruction PR-3 design contract: original Vento tokens, exact landing copy, responsive information architecture, conversation states, accessible handoff/fallback behavior, performance constraints, and rollout invariants.
 - Original Vento landing and message-style onboarding are implemented: the conversation submits to the existing durable waitlist API, preserves attribution and consent, and provides an honest web fallback when no owned SMS number is configured.
 - Liquid-sculpture implementation is in source: client-only Three.js shader ribbon, responsive editorial composition, pointer response, visibility throttling, reduced-motion still, context-loss handling, and static poster/GPU-off fallback. Final footage and reference-image acceptance remain blocked on missing owner assets.
+- Creative-direction correction restores `find your people in {city}.` as the primary rotating proposition, adds a licensed four-clip human nightlife montage with full source provenance, and deepens the shader sculpture's folds, twist, scale, rotation, and edge lighting.
 
 ## Live infrastructure
 

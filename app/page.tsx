@@ -57,9 +57,8 @@ export default function Home() {
     </header>
     <section className="center" aria-live="polite">
       {!signup ? <>
-        <h1 className="hero-title">this night has potential.</h1>
-        <p className="hero-support">find your people anywhere.</p>
-        <p className="city-line" aria-label={`currently in ${places[place]}`}><span className="place-window"><span className="place-name" style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(-.22em)" }}>{places[place]}.</span></span></p>
+        <p className="hero-kicker">good things happen offline.</p>
+        <h1 className="hero-title">find your people in <span className="place-window"><span className="place-name" style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(-.32em)" }}>{places[place]}.</span></span></h1>
         <button className="cta text-button" onClick={() => setSignup(true)}>join the waitlist.</button>
       </> : <div className="panel">
         {status === "success" ? <div className="success-state"><p className="eyebrow">vento.</p><h1>almost there.</h1><p>{message}</p><p className="muted">good things happen offline.</p></div> : <>

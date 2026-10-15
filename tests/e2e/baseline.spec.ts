@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 
 test("landing page exposes the waitlist flow", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { name: "this night has potential." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /find your people in new york city\./i })).toBeVisible();
   await expect(page.getByRole("button", { name: "join the waitlist." })).toBeVisible();
   await expect(page.getByTestId("liquid-sculpture")).toHaveAttribute("data-state", /ready|fallback/);
   await expect(page.locator("html")).toHaveJSProperty("scrollWidth", await page.locator("html").evaluate((element) => element.clientWidth));
@@ -24,7 +24,7 @@ test("landing respects reduced motion", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
   await expect(page.getByTestId("liquid-sculpture")).toHaveAttribute("data-state", /ready|fallback/);
-  await expect(page.getByRole("heading", { name: "this night has potential." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /find your people in new york city\./i })).toBeVisible();
 });
 
 test("conversation onboarding progresses without collecting hidden data", async ({ page }) => {

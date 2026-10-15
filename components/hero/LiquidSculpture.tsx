@@ -39,7 +39,7 @@ export default function LiquidSculpture() {
     const geometry = createRibbonGeometry();
     const material = createLiquidMaterial();
     const mesh = new Mesh(geometry, material);
-    mesh.rotation.z = -0.13;
+    mesh.rotation.set(-0.2, 0.32, -0.15);
     scene.add(mesh);
     renderer.setClearColor(0x070708, 0);
     renderer.domElement.className = "liquid-canvas";
@@ -53,8 +53,8 @@ export default function LiquidSculpture() {
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, mobile ? 1.5 : 1.75));
       renderer.setSize(width, height, false);
       camera.aspect = width / height;
-      camera.position.z = mobile ? 12.8 : 10.2;
-      mesh.scale.set(mobile ? .82 : 1, mobile ? .92 : 1, 1);
+      camera.position.z = mobile ? 12.1 : 9.35;
+      mesh.scale.set(mobile ? 1.02 : 1.16, mobile ? 1.12 : 1.2, 1);
       camera.updateProjectionMatrix();
     };
     const resizeObserver = new ResizeObserver(resize);
