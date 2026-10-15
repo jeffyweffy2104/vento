@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" role="img" aria-label="">
+  <defs>
+    <linearGradient id="glass" x1="0" x2="1">
+      <stop offset="0" stop-color="#020505" stop-opacity=".15"/>
+      <stop offset=".24" stop-color="#eef9ff" stop-opacity=".72"/>
+      <stop offset=".28" stop-color="#1a5362" stop-opacity=".3"/>
+      <stop offset=".52" stop-color="#050707" stop-opacity=".68"/>
+      <stop offset=".72" stop-color="#b8c9ff" stop-opacity=".65"/>
+      <stop offset=".76" stop-color="#6f174c" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#010202" stop-opacity=".12"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="1.4"/></filter>
+  </defs>
+  <path d="M-90 430 C170 110 360 540 600 315 S1030 70 1190 300 S1470 520 1700 160 L1700 270 C1435 590 1220 425 1080 270 S790 225 610 430 S190 260 -90 540Z" fill="url(#glass)" opacity=".92"/>
+  <path d="M-70 435 C180 145 365 515 605 316 S1020 105 1190 306 S1460 500 1680 185" fill="none" stroke="#f1f7ff" stroke-opacity=".76" stroke-width="7" filter="url(#soft)"/>
+  <path d="M40 492 C260 345 430 548 635 386 S1000 173 1170 340 S1420 490 1580 300" fill="none" stroke="#79d9ff" stroke-opacity=".22" stroke-width="5"/>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "status": "blocked_missing_owner_assets",
+  "clips": [
+    { "filename": "berlin.mp4", "city": "Berlin", "sha256": null, "rights": null },
+    { "filename": "new-york.mp4", "city": "New York", "sha256": null, "rights": null },
+    { "filename": "paris.mp4", "city": "Paris", "sha256": null, "rights": null },
+    { "filename": "london.mp4", "city": "London", "sha256": null, "rights": null }
+  ],
+  "requiredBeforeRelease": ["sha256", "rights", "source", "duration", "approvedCrop"]
+}

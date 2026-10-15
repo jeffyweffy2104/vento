@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useEffect, useMemo, useState } from "react";
+import { HeroStage } from "../components/hero/HeroStage";
 
 const places = ["new york city", "tokyo", "berlin", "paris", "london", "amsterdam", "copenhagen"];
 
@@ -49,17 +49,17 @@ export default function Home() {
     }
   }
 
-  return <main className="shell home-shell">
+  return <main className={`shell home-shell liquid-home${signup ? " signup-open" : ""}`}>
+    <HeroStage />
     <header className="top">
-      <Link className="logo logo-image" href="/" aria-label="vento home"><Image src="/vento-mark.svg" alt="" width={54} height={54} priority /></Link>
-      <nav className="top-links" aria-label="primary"><Link href="/messages">messages</Link><Link href="/about">about</Link></nav>
+      <Link className="liquid-wordmark" href="/" aria-label="vento home">vento.</Link>
+      <span className="liquid-edition">01 / NYC</span>
     </header>
     <section className="center" aria-live="polite">
       {!signup ? <>
-        <p className="hero-eyebrow">nyc first. everywhere next.</p>
         <h1 className="hero-title">this night has potential.</h1>
-        <p className="hero-support">vento brings the right people together for nights worth remembering.</p>
-        <p className="city-line">starting in <span className="place-window"><span className="place-name" style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(-.22em)" }}>{places[place]}.</span></span></p>
+        <p className="hero-support">find your people anywhere.</p>
+        <p className="city-line" aria-label={`currently in ${places[place]}`}><span className="place-window"><span className="place-name" style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(-.22em)" }}>{places[place]}.</span></span></p>
         <button className="cta text-button" onClick={() => setSignup(true)}>join the waitlist.</button>
       </> : <div className="panel">
         {status === "success" ? <div className="success-state"><p className="eyebrow">vento.</p><h1>almost there.</h1><p>{message}</p><p className="muted">good things happen offline.</p></div> : <>
@@ -78,6 +78,6 @@ export default function Home() {
         <button className="close-button" onClick={() => { setSignup(false); setStatus("idle"); setMessage(""); }}>close.</button>
       </div>}
     </section>
-    <footer className="foot"><span>© 2026 vento.</span><span>good things happen offline.</span></footer>
+    <footer className="foot"><span>nyc first. everywhere next.</span><span>good things happen offline.</span></footer>
   </main>;
 }
