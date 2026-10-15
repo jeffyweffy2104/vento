@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useEffect, useMemo, useState } from "react";
 
-const places = ["new york city.", "tokyo.", "berlin.", "paris.", "london.", "amsterdam.", "copenhagen."];
+const places = ["new york city", "tokyo", "berlin", "paris", "london", "amsterdam", "copenhagen"];
 
 export default function Home() {
   const [place, setPlace] = useState(0);
@@ -52,12 +52,15 @@ export default function Home() {
   return <main className="shell home-shell">
     <header className="top">
       <Link className="logo logo-image" href="/" aria-label="vento home"><Image src="/vento-mark.svg" alt="" width={54} height={54} priority /></Link>
-      <Link href="/about">about</Link>
+      <nav className="top-links" aria-label="primary"><Link href="/messages">messages</Link><Link href="/about">about</Link></nav>
     </header>
     <section className="center" aria-live="polite">
       {!signup ? <>
-        <h1 className="hero-title">Find your people in <span className="place-window"><span className="place-name" style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(-.22em)" }}>{places[place]}</span></span></h1>
-        <button className="cta text-button" onClick={() => setSignup(true)}>join the waitlist.<span aria-hidden="true"> ↗</span></button>
+        <p className="hero-eyebrow">nyc first. everywhere next.</p>
+        <h1 className="hero-title">this night has potential.</h1>
+        <p className="hero-support">vento brings the right people together for nights worth remembering.</p>
+        <p className="city-line">starting in <span className="place-window"><span className="place-name" style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(-.22em)" }}>{places[place]}.</span></span></p>
+        <button className="cta text-button" onClick={() => setSignup(true)}>join the waitlist.</button>
       </> : <div className="panel">
         {status === "success" ? <div className="success-state"><p className="eyebrow">vento.</p><h1>almost there.</h1><p>{message}</p><p className="muted">good things happen offline.</p></div> : <>
           <p className="eyebrow">private beta</p><h1>you&apos;re invited.</h1><p>be first to hear when vento. opens in your city.</p>
