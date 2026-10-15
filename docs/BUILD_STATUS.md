@@ -11,17 +11,22 @@
 - Authenticated founder dashboard with totals, trends, sources, referrals, and recent signups.
 - Privacy, terms, robots, sitemap, 404, security headers, health endpoint, and social metadata.
 - Automated lint, type, unit test, production build, and GitHub Actions verification.
+- 222 reconstruction PR-1 foundation: architecture boundary ADR, safe capture runbook, ignored raw-evidence area, redaction utility, route/parity templates, and desktop/mobile Playwright smoke coverage.
 
-## External launch gates
+## Live infrastructure
 
-- Create/configure Supabase project and apply migration.
-- Create founder Supabase Auth user and `admin_users` owner row.
-- Confirm the exact official mailbox/sender and verify Resend DNS.
-- Set production environment values in Vercel.
-- Connect `vento-us.com` using Vercel-provided DNS values without replacing mail records.
+- Vercel Hobby deployment is live at `https://vento-us.com`.
+- Supabase project and initial migration are configured; the founder owner is provisioned.
+- Resend sending domain `updates.vento-us.com` is verified and the signed webhook is configured.
+- The 222 evidence capture and reconstructed product surfaces are not yet production-complete.
+
+## Remaining external launch gates
+
 - Replace the approximate `public/vento-mark.svg` with the approved source export when supplied.
 - Review legal copy with counsel before sending marketing SMS; SMS delivery is intentionally not enabled.
+- Verify any messaging provider/API and Apple platform requirements before representing an iMessage handoff as functional.
+- Complete authorized reference capture and approve the parity/design contracts before implementing later reconstruction phases.
 
 ## Verification
 
-`npm run verify` is the release gate.
+`npm run verify` is the source release gate. `npm run test:e2e:install && npm run test:e2e` verifies browser smoke coverage.

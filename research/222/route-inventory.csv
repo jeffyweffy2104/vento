@@ -1,0 +1,4 @@
+route,access,state,viewport,evidence_id,notes
+https://222.place,public,unknown,desktop,,Pending authorized capture
+https://222.place,public,unknown,mobile,,Pending authorized capture
+https://222.place/recover-abc-onboarding?utm_source=landing,public-or-gated,unknown,desktop,,Do not proceed past authorization boundary without an owner-controlled identity
